@@ -31,16 +31,10 @@ def add_publication_image(match):
     image_count += 1
     src = escape(image_path.relative_to(ROOT).as_posix(), quote=True)
     alt = escape(metadata.get("alt", f"Research figure for {key}"), quote=True)
-    caption = escape(metadata.get("caption", "Research figure"))
-    source = metadata.get("source")
-    if source:
-        caption = (f'<a href="{escape(source, quote=True)}" target="_blank" '
-                   f'rel="noopener noreferrer">{caption}</a>')
     figure = f'''            <figure class="paper-figure">
               <a class="paper-image-link" href="{src}" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: {alt}">
                 <img src="{src}" alt="{alt}" loading="lazy" decoding="async">
               </a>
-              <figcaption>{caption}<span aria-hidden="true"> ↗</span></figcaption>
             </figure>
 '''
     return f'<article class="paper paper-with-figure" data-paper="{key}">{body.rstrip()}\n{figure}          </article>'
