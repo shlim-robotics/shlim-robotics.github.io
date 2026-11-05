@@ -97,7 +97,6 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 26px
 .footer-name { font-weight: 600; color: var(--ink); font-size: 12px; }
 footer p { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
 .footer-right { text-align: right; }
-.footer-right p a { color: inherit; text-decoration: underline; }
 .skip-link { position: fixed; left: 16px; top: -100px; z-index: 50; background: var(--accent); color: #fff; padding: 8px 16px; }
 .skip-link:focus { top: 10px; }
 @media (max-width: 760px) {
