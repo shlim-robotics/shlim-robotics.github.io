@@ -46,9 +46,10 @@ html = re.sub(
     flags=re.DOTALL,
 )
 
-# A changed stylesheet must bypass cached CSS from an earlier deployment.
-stylesheet_version = sha256((ROOT / "styles.css").read_bytes()).hexdigest()[:12]
-html = html.replace('href="styles.css"', f'href="styles.css?v={stylesheet_version}"')
+# Changed stylesheets and downloads must bypass older cached versions.
+for asset in ("styles.css", "assets/Seonghyeon_Lim_CV.pdf"):
+    version = sha256((ROOT / asset).read_bytes()).hexdigest()[:12]
+    html = html.replace(f'href="{asset}"', f'href="{asset}?v={version}"')
 
 # GitHub Pages supplies its actual URL, including any custom domain or base path.
 site_url = os.environ.get("SITE_URL", "").strip().rstrip("/")
