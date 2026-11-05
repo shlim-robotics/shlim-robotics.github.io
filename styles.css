@@ -59,6 +59,13 @@ strong { font-weight: 600; }
 .count { color: var(--muted); font-size: 10px; margin-left: 3px; }
 .section-note { color: var(--muted); font-size: 11px; margin-bottom: 8px; }
 .paper { display: grid; grid-template-columns: 55px minmax(0, 1fr); gap: 14px; padding: 25px 0; border-bottom: 1px solid #f1eae4; }
+.paper-with-figure { grid-template-columns: 55px minmax(0, 1fr) 210px; column-gap: 20px; }
+.paper-figure { margin: 0; min-width: 0; align-self: center; }
+.paper-image-link { display: block; border: 1px solid var(--line); border-radius: 5px; padding: 5px; background: white; transition: border-color .15s; }
+.paper-image-link:hover { border-color: var(--accent); }
+.paper-figure img { display: block; width: 100%; max-height: 190px; object-fit: contain; }
+.paper-figure figcaption { margin-top: 4px; color: var(--muted); font-size: 10px; text-align: right; }
+.paper-figure figcaption a { color: var(--muted); }
 .paper:last-child { border-bottom: 0; padding-bottom: 2px; }
 .paper-year { font-size: 12px; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
 .paper h3 { font-size: 16px; line-height: 1.55; margin-bottom: 7px; }
@@ -118,6 +125,11 @@ footer p { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
   .entry-heading { display: block; }
   .entry-heading .date { margin: 2px 0 5px; }
   .location { float: none; display: block; margin-top: 3px; }
+  .paper-with-figure { grid-template-columns: 42px minmax(0, 1fr) 160px; column-gap: 14px; }
+}
+@media (max-width: 640px) {
+  .paper-with-figure { grid-template-columns: 42px minmax(0, 1fr); }
+  .paper-with-figure .paper-figure { grid-column: 2; width: min(100%, 260px); justify-self: end; }
 }
 @media (max-width: 520px) {
   html { scroll-padding-top: 74px; }
@@ -138,7 +150,8 @@ footer p { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
   .interests { font-size: 10px; }
   .interests span + span::before { padding: 0 7px; }
   .section-heading { gap: 10px; }
-  .paper { grid-template-columns: minmax(0,1fr); gap: 5px; padding: 22px 0; }
+  .paper, .paper-with-figure { grid-template-columns: minmax(0,1fr); gap: 5px; padding: 22px 0; }
+  .paper-with-figure .paper-figure { grid-column: 1; margin-top: 13px; }
   .paper-year { font-size: 11px; }
   .paper h3 { font-size: 15px; }
   .paper p { font-size: 12px; }

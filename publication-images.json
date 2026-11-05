@@ -1,0 +1,41 @@
+{
+  "value-anchoring": {
+    "alt": "Research figure from Adaptive Value Anchoring",
+    "caption": "Fig. 1"
+  },
+  "mapo": {
+    "alt": "Figure 1 from MAPO: humanoid motion tracking examples and policy comparisons",
+    "caption": "Fig. 1",
+    "source": "https://arxiv.org/pdf/2611.02613#page=1"
+  },
+  "openheart": {
+    "alt": "Figure 1 from OpenHEART: a legged manipulator opening a cabinet and a drawer",
+    "caption": "Fig. 1",
+    "source": "https://arxiv.org/pdf/2603.05830#page=1"
+  },
+  "ik-compensation": {
+    "alt": "Research figure from reinforcement learning-based inverse kinematics compensation",
+    "caption": "Fig. 1",
+    "source": "https://ieeexplore.ieee.org/abstract/document/11301315"
+  },
+  "st-cbs": {
+    "alt": "Research figure from ST-CBS multi-agent pathfinding",
+    "caption": "Fig. 1",
+    "source": "https://dl.acm.org/doi/abs/10.1145/3672608.3707716"
+  },
+  "whole-body-control": {
+    "alt": "Research figure from whole-body control with learned terrain estimation",
+    "caption": "Fig. 1",
+    "source": "https://ieeexplore.ieee.org/abstract/document/10773069"
+  },
+  "modular-robot": {
+    "alt": "Figure 1 from the modular robotic platform paper: the robot arm and laboratory equipment",
+    "caption": "Fig. 1",
+    "source": "https://doi.org/10.1002/aisy.202300566"
+  },
+  "spikebot": {
+    "alt": "Figure 1 from Spikebot: pufferfish-inspired expansion and rolling and jumping locomotion",
+    "caption": "Fig. 1",
+    "source": "https://doi.org/10.1089/soro.2023.0030"
+  }
+}
