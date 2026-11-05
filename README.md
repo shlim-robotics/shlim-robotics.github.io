@@ -1,6 +1,6 @@
 # Seonghyeon Lim — Personal Website
 
-영문 연구자 홈페이지입니다. 전달받은 최신 CV 내용을 `/home/lim/shlim_ws/CV/main.tex`에 반영하고, 다운로드 파일도 다시 생성한 `CV/main.pdf`로 2026년 11월 5일 갱신했습니다. [Woogyeol Jin의 홈페이지](https://wls04.github.io/)의 간결한 구성을 참고해 새로 구현했습니다.
+영문 연구자 홈페이지입니다. 전달받은 최신 CV 내용을 `/home/lim/shlim_ws/CV/main.tex`에 반영하고, 다운로드 파일도 다시 생성한 `CV/main.pdf`로 2026년 11월 5일 갱신했습니다.
 
 ## 로컬에서 보기
 

@@ -63,7 +63,7 @@ strong { font-weight: 600; }
 .paper-figure { margin: 0; min-width: 0; align-self: center; }
 .paper-image-link { display: block; border: 1px solid var(--line); border-radius: 5px; padding: 5px; background: white; transition: border-color .15s; }
 .paper-image-link:hover { border-color: var(--accent); }
-.paper-figure img { display: block; width: 100%; max-height: 190px; object-fit: contain; }
+.paper-figure img { display: block; width: 100%; height: auto; max-height: 190px; object-fit: contain; }
 .paper-figure figcaption { margin-top: 4px; color: var(--muted); font-size: 10px; text-align: right; }
 .paper-figure figcaption a { color: var(--muted); }
 .paper:last-child { border-bottom: 0; padding-bottom: 2px; }
@@ -89,6 +89,7 @@ strong { font-weight: 600; }
 .location { float: right; font-size: 11px; }
 .award-list { display: grid; gap: 27px; }
 .award { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 20px; }
+.award-with-figure { grid-template-columns: 88px minmax(0,1fr) 210px; }
 .award > .date { padding-top: 3px; }
 .award h3 { font-size: 14px; }
 .award p { margin-bottom: 0; font-size: 12px; }
@@ -126,7 +127,8 @@ footer p { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
   .entry-heading .date { margin: 2px 0 5px; }
   .location { float: none; display: block; margin-top: 3px; }
   .paper-with-figure { grid-template-columns: 42px minmax(0, 1fr); column-gap: 14px; }
-  .paper-with-figure .paper-figure { grid-column: 1 / -1; width: 100%; margin-top: 8px; justify-self: stretch; }
+  .award-with-figure { grid-template-columns: 88px minmax(0,1fr); }
+  .paper-with-figure .paper-figure, .award-with-figure .paper-figure { grid-column: 1 / -1; width: 100%; margin-top: 8px; justify-self: stretch; }
   .paper-figure img { height: auto; max-height: none; }
 }
 @media (max-width: 520px) {
