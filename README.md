@@ -26,7 +26,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 Publications는 All 목록으로 논문 8편을 항상 모두 표시합니다. JavaScript를 끄거나 인쇄할 때도 모든 논문이 포함됩니다.
 
-논문 제목, 상태 및 링크는 최신 CV를 기준으로 반영했습니다. MAPO의 OpenReview/Project 링크와 iGEM Software 링크를 포함하며, Adaptive Value Anchoring는 학회명과 연도 없이 Under review로 표시합니다. 공개 링크가 없는 논문에는 임의의 링크를 추가하지 않았습니다. 대회는 최신 CV에 수록된 ICRA 2025와 iGEM 2022 두 항목을 표시합니다.
+논문 제목, 상태 및 링크는 최신 CV를 기준으로 반영했습니다. MAPO의 OpenReview/Project 링크와 Modular Robotic Platform의 Paper/Project 링크를 포함하며, Adaptive Value Anchoring는 학회명과 연도 없이 Under review로 표시합니다. 공개 링크가 없는 논문에는 임의의 링크를 추가하지 않았습니다. 대회는 최신 CV에 수록된 ICRA 2025와 iGEM 2022 두 항목을 표시합니다.
 
 PDF 교체 시 `assets/Seonghyeon_Lim_CV.pdf`를 새 파일로 덮어쓰면 됩니다. CV의 변경 사항이 웹 본문에 자동으로 반영되지는 않습니다.
 
