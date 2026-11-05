@@ -55,4 +55,17 @@ python3 build.py
 
 완성된 정적 사이트는 `dist/`에 생성됩니다. Sites 배포 설정은 `.openai/hosting.json`에 있습니다. 서버 기능이나 외부 JavaScript 라이브러리는 사용하지 않습니다.
 
-GitHub Pages에 올리려면 저장소의 웹 루트에 빌드된 `dist/` 내용을 배치하세요. 상대 경로를 사용하므로 프로젝트 하위 경로에서도 동작합니다. 다른 도메인으로 옮길 때는 `index.html`의 `og:image` URL도 해당 주소로 바꾸세요.
+## GitHub Pages 자동 배포
+
+`.github/workflows/deploy.yml`이 `main`에 push할 때마다 `python3 build.py`를 실행하고 `dist/`를 배포합니다. Actions 탭에서 수동 실행할 수도 있습니다. 원본 `index.html` 대신 빌드 결과를 배포해야 논문 이미지가 포함됩니다.
+
+개인 계정 이름을 유지하면서 별도 주소를 쓰려면 GitHub Free Organization을 만들고, 그 조직 소유의 공개 저장소를 `조직명.github.io`라는 이름으로 만드세요. 주소는 `https://조직명.github.io`입니다. 조직명은 다른 개인 계정 및 조직이 사용하지 않는 이름이어야 합니다. 개인 계정에 배포할 때도 같은 규칙으로 `계정명.github.io` 저장소를 사용합니다.
+
+1. GitHub에서 공개 저장소를 만들고 로컬 저장소를 `origin`으로 연결해 `main`을 push합니다.
+2. 저장소의 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 선택합니다.
+3. **Actions → Deploy website → Run workflow**에서 `main`을 선택해 첫 배포를 실행합니다. Pages 설정 전에 실행된 작업이 실패한 경우에도 이 순서로 다시 실행하면 됩니다.
+4. 배포 작업이 성공하면 **Settings → Pages**에 표시된 주소로 접속합니다. 이후에는 `main`에 push하면 자동 반영됩니다.
+
+워크플로는 실제 Pages 주소를 `SITE_URL`로 전달하므로 공유 미리보기 이미지의 절대 주소도 자동으로 맞춰집니다. 상대 경로를 사용하므로 프로젝트 하위 경로에서도 동작합니다. 다른 호스팅에서 빌드할 때도 `SITE_URL`에 실제 홈페이지 주소를 지정하면 됩니다. 변수를 지정하지 않으면 원본 HTML의 Sites 주소를 유지합니다.
+
+도메인을 별도로 구매했다면 GitHub Pages의 **Custom domain** 설정과 도메인 업체의 DNS를 연결할 수 있습니다. [GitHub 공식 도메인 연결 안내](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)를 참고하세요.

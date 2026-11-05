@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import json
+import os
 import re
 import shutil
 
@@ -49,6 +50,17 @@ html = re.sub(
     (ROOT / "index.html").read_text(),
     flags=re.DOTALL,
 )
+
+# GitHub Pages supplies its actual URL, including any custom domain or base path.
+site_url = os.environ.get("SITE_URL", "").strip().rstrip("/")
+if site_url:
+    image_url = escape(f"{site_url}/assets/seonghyeon-lim.jpg", quote=True)
+    html = re.sub(
+        r'(<meta property="og:image" content=")[^"]*(">)',
+        lambda match: f"{match[1]}{image_url}{match[2]}",
+        html,
+    )
+
 (OUT / "index.html").write_text(html)
 print(f"Site ready: {OUT / 'index.html'}")
 print(f"Publication images: {image_count}")
