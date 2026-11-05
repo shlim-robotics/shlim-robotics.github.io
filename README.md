@@ -1,6 +1,6 @@
 # Seonghyeon Lim — Personal Website
 
-`../CV/main.tex`의 활성 본문과 `../CV/main.pdf`를 바탕으로 만든 영문 연구자 홈페이지입니다. [Woogyeol Jin의 홈페이지](https://wls04.github.io/)의 간결한 구성을 참고해 새로 구현했습니다.
+영문 연구자 홈페이지입니다. 최신 본문과 다운로드 파일은 `/home/lim/Downloads/seonghyeon_lim_cv.pdf`를 기준으로 2026년 11월 5일 갱신했습니다. [Woogyeol Jin의 홈페이지](https://wls04.github.io/)의 간결한 구성을 참고해 새로 구현했습니다.
 
 ## 로컬에서 보기
 
@@ -15,7 +15,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 수정할 파일
 
-- `index.html`: 소개, 논문, 학력, 수상, 로봇 플랫폼 및 링크
+- `index.html`: 소개, 논문, 학력, 대회, 로봇 플랫폼 및 링크
 - `styles.css`: 데스크톱/모바일 레이아웃과 색상
 - `script.js`: 현재 섹션 표시
 - `assets/seonghyeon-lim.jpg`: 웹용으로 크기를 줄인 프로필 사진
@@ -23,7 +23,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Publications는 All 목록으로 논문 8편을 항상 모두 표시합니다. JavaScript를 끄거나 인쇄할 때도 모든 논문이 포함됩니다.
 
-CV에 공개 링크가 없는 ICLR 2027 제출 논문과 CoRL 2026 accepted 논문에는 임의의 링크를 추가하지 않았습니다. 제출/게재 상태는 CV에 적힌 그대로 표시하며 자동 갱신하지 않습니다. LaTeX에서 주석 처리된 Research Experience 및 Technical Skills는 포함하지 않았습니다.
+논문 제목, 상태 및 링크는 최신 PDF를 기준으로 반영했습니다. MAPO의 OpenReview/Project 링크와 iGEM Software 링크를 포함하며, ICLR 2027 논문은 Under review로 표시합니다. 공개 링크가 없는 논문에는 임의의 링크를 추가하지 않았습니다. 대회는 최신 CV에 수록된 ICRA 2025와 iGEM 2022 두 항목을 표시합니다.
 
 PDF 교체 시 `assets/Seonghyeon_Lim_CV.pdf`를 새 파일로 덮어쓰면 됩니다. CV의 변경 사항이 웹 본문에 자동으로 반영되지는 않습니다.
 

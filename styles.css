@@ -80,9 +80,9 @@ strong { font-weight: 600; }
 .award { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 20px; }
 .award > .date { padding-top: 3px; }
 .award h3 { font-size: 14px; }
-.award-event { font-weight: 400; }
 .award p { margin-bottom: 0; font-size: 12px; }
 .award .entry-detail { font-size: 11px; }
+.award .mission { margin-top: 7px; }
 .award-note { color: var(--accent); margin-top: 5px; }
 details { margin-top: 7px; font-size: 12px; }
 summary { color: var(--accent); cursor: pointer; width: fit-content; }
