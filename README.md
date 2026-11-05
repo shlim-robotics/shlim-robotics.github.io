@@ -17,11 +17,11 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 - `index.html`: 소개, 논문, 학력, 수상, 로봇 플랫폼 및 링크
 - `styles.css`: 데스크톱/모바일 레이아웃과 색상
-- `script.js`: Selected/All 논문 필터와 현재 섹션 표시
+- `script.js`: 현재 섹션 표시
 - `assets/seonghyeon-lim.jpg`: 웹용으로 크기를 줄인 프로필 사진
 - `assets/Seonghyeon_Lim_CV.pdf`: 다운로드용 CV
 
-논문 항목의 `data-selected="true"`를 설정하면 Selected 목록에 표시됩니다. 현재는 CV에 있는 연구 분야를 대표하는 논문 4편을 선택했습니다. All에는 8편이 표시됩니다. JavaScript를 끄면 모든 논문이 표시되며, 인쇄할 때도 모두 포함됩니다.
+Publications는 All 목록으로 논문 8편을 항상 모두 표시합니다. JavaScript를 끄거나 인쇄할 때도 모든 논문이 포함됩니다.
 
 CV에 공개 링크가 없는 ICLR 2027 제출 논문과 CoRL 2026 accepted 논문에는 임의의 링크를 추가하지 않았습니다. 제출/게재 상태는 CV에 적힌 그대로 표시하며 자동 갱신하지 않습니다. LaTeX에서 주석 처리된 Research Experience 및 Technical Skills는 포함하지 않았습니다.
 
