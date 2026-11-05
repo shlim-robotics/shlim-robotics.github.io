@@ -62,6 +62,8 @@ strong { font-weight: 600; }
 .paper-image-link { display: block; border: 1px solid var(--line); border-radius: 5px; padding: 5px; background: white; transition: border-color .15s; }
 .paper-image-link:hover { border-color: var(--accent); }
 .paper-figure img { display: block; width: 100%; height: auto; max-height: 190px; object-fit: contain; }
+/* Show panel B (y=532..1116) from the original 606 x 1116 figure. */
+.paper[data-paper="modular-robot"] .paper-figure img { aspect-ratio: 606 / 584; max-height: none; object-fit: cover; object-position: center bottom; }
 .paper:last-child { border-bottom: 0; padding-bottom: 2px; }
 .paper-year { font-size: 12px; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
 .paper h3 { font-size: 16px; line-height: 1.55; margin-bottom: 7px; }
