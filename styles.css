@@ -51,8 +51,6 @@ strong { font-weight: 600; }
 .navigation a[aria-current]::after { position: absolute; content: ""; height: 2px; background: var(--accent); bottom: -1px; left: 0; right: 0; }
 .section { padding: 43px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 20px; }
 .about p { font-size: 15px; line-height: 1.9; }
-.interests { display: flex; flex-wrap: wrap; gap: 8px 0; padding-top: 5px; color: var(--muted); font-size: 12px; }
-.interests span + span::before { content: "/"; color: #c7b4a5; padding: 0 14px; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
 .section-heading h2 { margin-bottom: 0; }
 .publication-view { color: var(--accent); border-bottom: 2px solid var(--accent); padding: 8px 12px; font-size: 12px; font-weight: 600; white-space: nowrap; }
@@ -145,8 +143,6 @@ footer p { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
   .section { padding: 32px 0; }
   h2 { font-size: 24px; margin-bottom: 19px; }
   .about p { font-size: 14px; }
-  .interests { font-size: 10px; }
-  .interests span + span::before { padding: 0 7px; }
   .section-heading { gap: 10px; }
   .paper, .paper-with-figure { grid-template-columns: minmax(0,1fr); gap: 5px; padding: 22px 0; }
   .paper-with-figure .paper-figure { margin-top: 13px; }
