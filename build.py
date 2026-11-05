@@ -1,6 +1,7 @@
 """Package the buildless site into dist/ using only the Python standard library."""
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json
 import os
 import re
@@ -50,6 +51,10 @@ html = re.sub(
     (ROOT / "index.html").read_text(),
     flags=re.DOTALL,
 )
+
+# A changed stylesheet must bypass cached CSS from an earlier deployment.
+stylesheet_version = sha256((ROOT / "styles.css").read_bytes()).hexdigest()[:12]
+html = html.replace('href="styles.css"', f'href="styles.css?v={stylesheet_version}"')
 
 # GitHub Pages supplies its actual URL, including any custom domain or base path.
 site_url = os.environ.get("SITE_URL", "").strip().rstrip("/")
