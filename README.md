@@ -22,7 +22,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 - `assets/seonghyeon-lim.jpg`: 웹용으로 크기를 줄인 프로필 사진
 - `assets/Seonghyeon_Lim_CV.pdf`: 다운로드용 CV
 - `assets/publications/`: 논문별 썸네일 이미지
-- `assets/videos/`: 페이지 하단 Videos 섹션의 MP4 영상 5개 (MAPO, OpenHEART, Offline RL locomotion·navigation, legged manipulation (ongoing))
+- `assets/videos/`: 페이지 하단 Videos 섹션의 MP4 영상 5개 (MAPO, OpenHEART, Offline RL locomotion·manipulation, legged manipulation (ongoing))
 - `publication-images.json`: 이미지 설명, 캡션 및 출처 링크
 
 Publications는 All 목록으로 논문 8편을 항상 모두 표시합니다. JavaScript를 끄거나 인쇄할 때도 모든 논문이 포함됩니다.
